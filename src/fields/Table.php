@@ -146,9 +146,10 @@ class Table extends Field implements FieldInterface
         }
 
         if ($type == 'date') {
-            $parsedValue = DateTimeHelper::toDateTime($value) ?: null;
+            //$parsedValue = DateTimeHelper::toDateTime($value) ?: null;
 
-            return $this->field->serializeValue($parsedValue);
+            //return $this->field->serializeValue($parsedValue);
+            return DateTimeHelper::toDateTime($value) ?: null;
         }
 
         if ($type == 'lightswitch') {
@@ -160,9 +161,10 @@ class Table extends Field implements FieldInterface
         }
 
         if ($type == 'time') {
-            $parsedValue = DateTimeHelper::toDateTime($value) ?: null;
+            //$parsedValue = DateTimeHelper::toDateTime($value) ?: null;
 
-            return $this->field->serializeValue($parsedValue);
+            //return $this->field->serializeValue($parsedValue);
+            return DateTimeHelper::toDateTime($value) ?: null;
         }
 
         // Protect against array values
